@@ -17,6 +17,7 @@
 }
 
 body{
+    
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(to bottom, var(--white), var(--tolightpurple));
@@ -26,7 +27,7 @@ body{
     align-items: center;
     gap: 4rem;
     color: black;   
-    background-image: linear-gradient(to bottom, var(--white), var(--tolightpurple), var(--darkpurple));
+    background-image: linear-gradient(to bottom, var(--white), var(--tolightpurple));
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -79,6 +80,10 @@ h1{
     width: 50px;
     height: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -108,18 +113,40 @@ h1{
     display: flex;
     justify-content: space-between;
     color: black;
+    align-items: center;
+
+}
+
+#to-do-list li:hover{
+
+    background-color: rgba(0, 0, 0, 0.04);
+    transition: .4s;
+    border-radius: 12px;
+    padding-left: 10px;
+
 
 }
 
 #btn{
     
-    background-color: rgb(4, 234, 4);
+    background-color: rgb(0, 194, 0);
     color: white;
     border: none;
-    outline: none;
-    width: 40px;
-    height: 40px;
+    color: var(--white);
+    padding: 0.1em 0.3em;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#btn:hover{
+    background-color:rgb(1, 162, 1);
+    transition: .4s;
     
 }
 
