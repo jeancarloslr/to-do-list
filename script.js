@@ -7,7 +7,13 @@ function newTask(){
  let impt = document.getElementById('impt-new-task');
  impt.style.borderColor = '';
 
+ const tarefa = {
+    descricao: impt.value,
+ }
 
+ values.push(tarefa);
+ localStorage.setItem('tarefas', JSON.stringify(values));
+ console.log(values)
     function inLista(imptvalue, valores){
 
         if(valores.indexOf(imptvalue) != -1){
@@ -26,26 +32,19 @@ function newTask(){
         impt.style.borderColor = "red";
         alert('insira alguma task.')
     }
-
     else if(inLista(impt.value, values)){
 
         impt.style.borderColor = "red";
         alert('digite uma tarefa que não esteja na lista');
-
     }
-
     else{
-
         values.push(impt.value);
         impt.value = '';
         impt.focus();
         
         ShowValues()
-
     }
-
     }
-
     function ShowValues(){
 
         list = document.getElementById('to-do-list')
@@ -59,7 +58,6 @@ function newTask(){
 
         }
 
-       
     }
 
     function removeItem(index){
