@@ -106,7 +106,7 @@ h1{
     padding: 0px;
 }
 
-#to-do-list li{
+ .liTarefa{
     list-style-type: none;
     font-size: 1.1em;
     text-transform: capitalize;
