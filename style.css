@@ -44,7 +44,7 @@ h1{
 .content{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .adicionar{
@@ -150,6 +150,25 @@ h1{
 .iconDone{
     width: 28px;
     height: 28px;
+}
+
+.Tarefas-funcionalidades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Tarefas-funcionalidades button{
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid #4703A6;
+    color: black;
 }
 
 
