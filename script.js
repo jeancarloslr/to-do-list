@@ -1,7 +1,10 @@
 const btnAddTask = document.querySelector('#btn-ntask');
 const task = document.querySelector('#impt-new-task');
+const btnDeleteAll = document.querySelector('.deletarTodas');
+const btnDeleteConcluidas = document.querySelector('.deletarConcluidas')
 let lista = document.querySelector('#to-do-list');
 let tarefas = JSON.parse(localStorage.getItem('atividades')) || []
+let tarefasCompletas = [];
 let buttonDisabled = null;
 
 function atualizarTask(){
@@ -60,4 +63,16 @@ tarefas.forEach(tarefa => {
     const elementoTask = createTask(tarefa);
     lista.append(elementoTask);
 });
+
+btnDeleteAll.addEventListener("click", () =>{
+    lista.remove();
+    tarefas = [];
+    atualizarTask();
+});
+
+btnDeleteConcluidas.addEventListener('click', () =>{
+
+});
+
+
 
