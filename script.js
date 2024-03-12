@@ -70,9 +70,7 @@ btnDeleteAll.addEventListener("click", () =>{
     atualizarTask();
 });
 
-btnDeleteConcluidas.addEventListener('click', () =>{
 
-});
 
 
 
