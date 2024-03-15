@@ -5,6 +5,7 @@ const btnDeleteConcluidas = document.querySelector('.deletarConcluidas')
 let lista = document.querySelector('#to-do-list');
 let tarefas = JSON.parse(localStorage.getItem('atividades')) || []
 let tarefasCompletas = [];
+let tarefaCompleta = null;
 let buttonDisabled = null;
 
 function atualizarTask(){
@@ -31,9 +32,11 @@ function createTask(tarefa) {
     li.append(circle);
 
     if(tarefa.completa){
+        tarefaCompleta = tarefa.completa;
         circle.setAttribute('disabled', 'disabled');
-        circle.classList.add("btnDisabled")
+        circle.classList.add("btnDisabled");
         li.classList.add('completed');
+
     }else{
         circle.addEventListener('click', () =>{
             tarefa.completa = true;
@@ -69,6 +72,16 @@ btnDeleteAll.addEventListener("click", () =>{
     tarefas = [];
     atualizarTask();
 });
+
+btnDeleteConcluidas.addEventListener('click', () =>{
+    tarefas = tarefas.filter(tarefa => !tarefa.completa);
+    atualizarTask();
+})
+
+
+
+
+
 
 
 
