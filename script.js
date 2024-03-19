@@ -74,6 +74,10 @@ btnDeleteAll.addEventListener("click", () =>{
 });
 
 btnDeleteConcluidas.addEventListener('click', () =>{
+    const seletorConcluida = '.completed';
+    document.querySelectorAll(seletorConcluida).forEach(elemento =>{
+        elemento.remove();
+    });
     tarefas = tarefas.filter(tarefa => !tarefa.completa);
     atualizarTask();
 })
